@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title text-uppercase>Settings</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <button ion-item (click)="clear()">
+            <ion-icon name="trash" item-left></ion-icon>
+            Clear Settings
+        </button>
+    </ion-list>
+</ion-content>

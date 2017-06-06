@@ -1,0 +1,35 @@
+<!--<ion-header>
+    <ion-navbar>
+        <ion-title text-uppercase>Sign In</ion-title>
+    </ion-navbar>
+</ion-header>-->
+
+<ion-content padding class="bg">
+    <div class="spacer"></div>
+    <div class="logo">
+        <img src="assets/icon/house-1.svg" alt="">
+    </div>
+    <div class="title">
+        <h2>Signin</h2>
+        <p>Please use your email address and password you registered with to Signin!</p>
+    </div>
+
+    <div class="spacer"></div>
+    <form [formGroup]="account" (ngSubmit)="login()">
+        <ion-list>
+            <ion-item>
+                <ion-label>Email</ion-label>
+                <ion-input type="text" formControlName="email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Password</ion-label>
+                <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+        </ion-list>
+        <div class="spacer"></div>
+        <button ion-button color="positive" [disabled]="!account.valid" block large outline>Signin</button>
+
+    </form>
+    <div class="spacer"></div>
+    <button ion-button color="positive" block (click)="signup()" clear>Signup</button>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="book()">
+                <ion-icon name="cart"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title text-uppercase>Property Detail</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+    <ion-list>
+        <ion-item text-wrap>
+            <h2>{{category}}</h2>
+            <p>{{description}}</p>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

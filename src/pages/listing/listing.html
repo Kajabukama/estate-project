@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title text-uppercase>Properties</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content no-padding>
+    <ion-list text-wrap>
+        <button ion-item *ngFor="let item of this.listing.listings" (click)="details(item.id)">
+           <ion-avatar item-left><img src="assets/icon/house.svg"></ion-avatar>
+            <h2>{{item.category}}</h2>
+            <p> For {{item.type}}</p>
+            <p>{{item.description}}</p>
+        </button>
+    </ion-list>
+</ion-content>

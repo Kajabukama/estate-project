@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title text-uppercase>Sign Up</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="spacer"></div>
+    <div class="title-section">
+        <p>Create an account here, all details are required in order to be fully qualified to use the app</p>
+    </div>
+
+    <div class="spacer"></div>
+    <form [formGroup]="account" (ngSubmit)="signup()">
+        <ion-list>
+            <ion-item>
+                <ion-label>Firstname</ion-label>
+                <ion-input type="text" formControlName="firstname"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Lastname</ion-label>
+                <ion-input type="text" formControlName="lastname"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Gender</ion-label>
+                <ion-select formControlName="sex">
+                    <ion-option value="Male">Male</ion-option>
+                    <ion-option value="Female">Female</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>DOB</ion-label>
+                <ion-datetime displayFormat="MMM DD YYYY" formControlName="dob"></ion-datetime>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Mobile </ion-label>
+                <ion-input type="text" formControlName="phone"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Email</ion-label>
+                <ion-input type="text" formControlName="email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Password</ion-label>
+                <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Account Type</ion-label>
+                <ion-select formControlName="role">
+                    <ion-option value="client">Client</ion-option>
+                    <ion-option value="owner">Owner</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+        <div class="spacer"></div>
+        <button ion-button color="positive" [disabled]="!account.valid" block>Signup</button>
+    </form>
+</ion-content>

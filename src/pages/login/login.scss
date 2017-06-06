@@ -1,0 +1,28 @@
+page-login {
+    .bg {
+        background: #311B92
+    }
+    .title {
+        text-align: center;
+        color: #EDE7F6;
+        font-size: 1em;
+    }
+    .spacer {
+        height: 20px;
+    }
+    ion-button {
+        button {
+            border: 2px solid #fff;
+        }
+    }
+    .logo {
+        margin-bottom: 15px;
+    }
+    .logo img {
+        border: none;
+        display: block;
+        margin: 0 auto;
+        width: 40%;
+        text-align: center;
+    }
+}

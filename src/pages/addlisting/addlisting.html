@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title text-uppercase>Add Property</ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="spacer"></div>
+    <div class="title-section">
+        <p>Please provide all information in form given below. In order for your listing to be discovered by customers all information must be provided.</p>
+    </div>
+
+    <div class="spacer"></div>
+    <form [formGroup]="listing" (ngSubmit)="addlisting()">
+        <ion-list>
+            <ion-item>
+                <ion-label>Listing Type</ion-label>
+                <ion-select formControlName="type">
+                    <ion-option value="Rent">For Rent</ion-option>
+                    <ion-option value="Sell">For Sale</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Category</ion-label>
+                <ion-select formControlName="category">
+                    <ion-option value="General">General</ion-option>
+                    <ion-option value="Single Room">Single Room</ion-option>
+                    <ion-option value="Apartment">Apartment</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Price</ion-label>
+                <ion-input type="number" formControlName="price"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Location</ion-label>
+                <ion-select formControlName="location">
+                    <ion-option value="Arusha">Arusha</ion-option>
+                    <ion-option value="Dar es salaam">Dar es salaam</ion-option>
+                    <ion-option value="Dodoma">Dodoma</ion-option>
+                    <ion-option value="Tanga">Tanga</ion-option>
+                    <ion-option value="Mbeya">Mbeya</ion-option>
+                    <ion-option value="Mtwara">Mtwara</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Address</ion-label>
+                <ion-input type="text" formControlName="address"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>description</ion-label>
+                <ion-textarea formControlName="description"></ion-textarea>
+            </ion-item>
+
+        </ion-list>
+        <div class="spacer"></div>
+        <button ion-button color="positive" [disabled]="!listing.valid" block>Add Listing</button>
+    </form>
+</ion-content>
